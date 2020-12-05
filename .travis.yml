@@ -8,9 +8,7 @@ matrix:
     allow_failures:
         - python: "nightly"
 before_install:
-    - pip install pipenv
-    - pipenv install --dev --skip-lock
+    - pip install poetry
+    - poetry install
 script:
-    - pipenv run codespell -L paket --skip=./textstat/resources/*/easy_words.txt
-    - pipenv run flake8 .
-    - pipenv run pytest test.py
+    - make check
