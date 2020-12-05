@@ -3,7 +3,13 @@ import collections
 
 
 class Stats:
-    properties = ["characters", "letters", "words", "syllables", "difficult_words"]
+    properties = [
+        "characters",
+        "letters",
+        "words",
+        "syllables",
+        "difficult_words"
+    ]
 
     def __init__(self, text):
         self._text = text
@@ -20,7 +26,10 @@ class Stats:
 
     @property
     def letters(self):
-        return [*(char for char in self._text if char not in string.punctuation)]
+        return [*(
+            character for character in self._text
+            if character not in string.punctuation
+        )]
 
     @property
     def words(self):
@@ -45,8 +54,8 @@ class Stats:
             prop: len(getattr(self, prop))
             for prop in [
                 *self.__class__.properties,
-                *["unique_" + u_prop for u_prop in self.__class__.properties],
-                *[c_prop[:-1] + "_count" for c_prop in self.__class__.properties],
+                *["unique_" + u for u in self.__class__.properties],
+                *[c[:-1] + "_count" for c in self.__class__.properties],
             ]
         }
 
