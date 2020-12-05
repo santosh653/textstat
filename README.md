@@ -364,8 +364,8 @@ branch (or branch off of it).
 ### Development setup
 
 > It is recommended you use a [virtual environment](
-https://docs.python.org/3/tutorial/venv.html), or [Pipenv](
-https://docs.pipenv.org/) to keep your development work isolated from your
+https://docs.python.org/3/tutorial/venv.html), or [Poetry](
+https://python-poetry.org/) to keep your development work isolated from your
 systems Python installation.
 
 ```bash

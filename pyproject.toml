@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "textstat"
+version = "0.7.0"
+description = "Calculate statistical features from text"
+authors = [
+    "Shivam Bansal <shivam5992@gmail.com>",
+    "Alex Ward <alxwrd@googlemail.com>"
+]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+Pyphen = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+codespell = "^2.0.0"
+flake8 = "^3.8.4"
+pytest = "^6.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

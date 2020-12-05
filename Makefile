@@ -1,14 +1,19 @@
 .PHONY: dist
 
 install:
-	python setup.py install
+	python3 -m pip install .
+
+check: test style spelling
 
 test:
-	pipenv run pytest test.py
+	poetry run pytest test.py
 
 style:
-	pipenv run pycodestyle textstat/
-	pipenv run pycodestyle test.py
+	poetry run flake8 textstat/
+	poetry run pycodestyle test.py
+
+spelling:
+	poetry run codespell -L paket --skip=./**/easy_words.txt
 
 clean:
 	rm -rf build/ dist/ textstat.egg-info/ __pycache__/ */__pycache__/
