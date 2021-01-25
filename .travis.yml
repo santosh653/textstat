@@ -1,3 +1,17 @@
+# ----------------------------------------------------------------------------
+#
+# Package             : textstat
+# Source Repo         : https://github.com/shivam5992/textstat
+# Travis Job Link     : https://travis-ci.com/github/santosh653/textstat
+# Created travis.yml  : No
+# Maintainer          : Santosh Kulkarni <santoshkulkarni70@gmail.com>
+#
+# Script License      : Apache License, Version 2 or later
+#
+# ----------------------------------------------------------------------------
+arch:
+ - amd64
+ - ppc64le
 language: python
 python:
     - "3.6"
